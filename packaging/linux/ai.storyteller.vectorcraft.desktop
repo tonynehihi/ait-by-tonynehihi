@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=Illustrator by Tony
+GenericName=Vector Graphics Editor
+Comment=Draw and edit vector illustrations, SVG and PDF
+Exec=vectorcraft %F
+TryExec=vectorcraft
+Icon=com.tony.illustrator
+Terminal=false
+StartupNotify=true
+StartupWMClass=com.tony.illustrator
+Categories=Graphics;2DGraphics;VectorGraphics;
+Keywords=vector;illustration;svg;pdf;drawing;bezier;
+MimeType=image/svg+xml;application/pdf;
