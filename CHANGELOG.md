@@ -1,5 +1,14 @@
 # Changelog
 
+## Illustrator by Tonynehihi 1.2.1
+
+Hotfix for the macOS build of 1.2.0 — no new features.
+
+- **FIXED THE MACOS BUILD**: the declaration line of the MCP server's instructions text sat in the wrong place in `crates/mcp/src/server.rs`, so the full app failed to compile. The 1.2.0 DMG never built, and updating from inside the app on macOS hit the same broken build. The line is back where it belongs and the whole workspace compiles again, tests included.
+- **DMG AND IN-APP UPDATE PATH RESTORED**: this release ships the macOS DMG as normal, and macOS users on 1.1.x can update to it from inside the app. Anyone who installed 1.2.0 on Windows is unaffected except by the version number.
+
+— tonynehihi
+
 ## Illustrator by Tonynehihi 1.2.0
 
 Syncs the app with upstream VectorCraft 0.16.0 (AiT 1.1.0 was based on 0.11.0), plus fork repairs found during the merge.

@@ -43,12 +43,12 @@ pub(crate) const MAX_LINE_BYTES: usize = 16 * 1024 * 1024;
 /// older clients can make the server parse and answer at once (#1727).
 pub(crate) const MAX_BATCH_MESSAGES: usize = 64;
 
-const INSTRUCTIONS: &str = "Illustrator by Tonynehihi is a professional vector illustration app. Coordinates are \
 /// Lines waiting to be written. A full queue holds up the thread that wants to write (the
 /// engine thread, the reader) rather than growing; progress is dropped instead (it is advisory).
 const OUTBOX: usize = 256;
 /// Fewest time between two `notifications/progress` of one request, the last one excepted.
 const PROGRESS_EVERY: Duration = Duration::from_millis(200);
+
 /// The sink that turns the engine's progress into `notifications/progress` for the request
 /// `msg`, when the client asked for it with `_meta.progressToken`.
 /// <https://modelcontextprotocol.io/specification/2025-06-18/basic/utilities/progress>
@@ -77,6 +77,7 @@ fn progress_sink(out: SyncSender<String>, msg: &Value) -> Option<cancel::Progres
     }))
 }
 
+const INSTRUCTIONS: &str = "Illustrator by Tonynehihi is a professional vector illustration app. Coordinates are \
 points in document space (y down, origin at the first artboard's top-left; a new document is 612×792). \
 Draw with draw_shape / draw_path, change colours with set_paint, look with render_preview and doc_inspect. \
 Every menu action is a command: find it with command_list and run it with command_run (or command_batch for several). New objects become \
