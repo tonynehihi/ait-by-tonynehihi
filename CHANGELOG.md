@@ -1,5 +1,19 @@
 # Changelog
 
+## Illustrator by Tonynehihi 1.2.0
+
+Syncs the app with upstream VectorCraft 0.16.0 (AiT 1.1.0 was based on 0.11.0), plus fork repairs found during the merge.
+
+- **PERCEPTUAL GRADIENTS**: gradients can now mix their colours in OKLab — pick Classic or Perceptual in the Gradient panel's new Method menu. Colour emoji fonts and COLR colour fonts draw on canvas and export as vector art.
+- **NEW RASTER EFFECTS**: Sketch › Note Paper, Bas Relief, Charcoal, Photocopy and Stamp, plus Artistic › Smudge Stick, Sponge and Watercolor.
+- **SHAPE BUILDER**: Shift-drag draws a marquee and merges every region it reaches, and a click on a stroke splits the path right there. The Transform effect gains Transform Objects, Transform Patterns and Scale Strokes & Effects options.
+- **PLUG-INS GROW UP**: live effects read their object's fills and strokes, plug-in exporters can write file formats of their own, and filters keep their data with the document.
+- **ARTBOARDS**: Width, Height, Preset and Orientation apply to every selected artboard at once, and a copied .ai or .ait file now pastes the objects of its editing data.
+- **EXPORT WARNINGS**: Save for Web, Export for Screens and Save for Office warn when an image couldn't be decoded or a font is missing, instead of silently shipping a broken file.
+- **FIXED IN THE FORK**: the app binary itself (broken by a bad merge), the keyboard-shortcut export that silently dropped its file dialog answer, and the translation catalogs in every language, restored in full — the complete test suite passes 2013/2013 on a Mac.
+
+— tonynehihi
+
 ## Illustrator by Tonynehihi 1.1.0
 
 First release of Illustrator by Tonynehihi (AiT), a personal build based on VectorCraft 0.11.0 by storytold.
